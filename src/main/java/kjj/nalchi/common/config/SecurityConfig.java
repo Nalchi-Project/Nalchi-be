@@ -41,7 +41,7 @@ public class SecurityConfig {
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .logout(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/signup", "/api/auth/login","/api/auth/refresh","/oauth2/**", "/oauth/**").permitAll()
+                        .requestMatchers("/api/auth/signup", "/api/auth/login","/api/auth/refresh","/oauth2/**", "/oauth/**","/api/test/diary").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2 -> oauth2
