@@ -5,14 +5,14 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Logout from './components/Logout';
 import Home from './components/Home';
-import Success from './components/Success';
+import Main from './components/Main';
 
 
 const App = () => {
   return (
       <Router>
         <Routes>
-          <Route path="/success" element={<Success />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
