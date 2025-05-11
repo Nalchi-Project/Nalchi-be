@@ -1,5 +1,5 @@
 import React from 'react';
-import { logout } from './authService';
+import { logout } from '../services/auth';
 
 function Logout() {
     const handleLogout = async () => {
