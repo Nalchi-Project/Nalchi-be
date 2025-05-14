@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from './authService';
+import { login } from '../services/auth';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -13,7 +13,7 @@ function Login() {
 
         if (accessToken && refreshToken) {
             alert('이미 로그인되어 있습니다.');
-            navigate('/success');
+            navigate('/main');
         }
     }, [navigate]);
 
@@ -22,7 +22,7 @@ function Login() {
         try {
             await login({ username, password });
             alert('로그인 성공');
-            navigate('/success');
+            navigate('/main');
         } catch (error) {
             alert('로그인 실패: ' + error.message);
         }
