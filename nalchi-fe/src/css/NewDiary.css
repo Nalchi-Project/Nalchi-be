@@ -1,50 +1,61 @@
+/* src/css/NewDiary.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #fff1f1, #fefbe9);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
 .new-diary-container {
-    font-family: sans-serif;
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    position: relative;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .new-diary-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
 }
 
 .new-diary-header h2 {
-    font-size: 22px;
-    color: #333;
+    font-size: 24px;
+    color: #ff6f91;
     margin: 0;
 }
 
 .back-button {
-    padding: 8px 15px;
-    border: 1px solid #ddd; /* 흰색 배경에 잘 보이도록 테두리 추가 */
-    border-radius: 4px;
-    background-color: white; /* 배경색을 흰색으로 변경 */
-    color: #333; /* 텍스트 색상을 검정색 계열로 변경 */
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    color: #333;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
 }
 
 .back-button:hover {
-    background-color: #f0f0f0; /* 호버 시 약간 밝은 회색으로 변경 */
+    background-color: #f0f0f0;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: #555;
     font-weight: bold;
 }
@@ -53,78 +64,84 @@
 .form-group input[type="date"],
 .form-group textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .form-group textarea {
-    min-height: 150px;
+    min-height: 140px;
+    resize: vertical;
 }
 
 .emotion-select {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .emotion-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-color: #fdfdfd;
     cursor: pointer;
-    width: 80px;
-    transition: 0.2s;
+    width: 85px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
 }
 
 .emotion-button img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
 }
 
 .emotion-button.selected {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #ffa07a;
+    background-color: #fff5f0;
+    box-shadow: 0 0 8px rgba(255, 160, 122, 0.4);
 }
 
 .button-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .submit-button {
-    flex: 1;
-    background-color: #007bff;
+    padding: 10px 24px;
+    background-color: #ffa07a;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #ff8c66;
 }
 
 .delete-button {
-    flex: 1;
+    padding: 10px 24px;
     background-color: #dc3545;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .delete-button:hover {
