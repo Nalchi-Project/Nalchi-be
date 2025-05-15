@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/Main.css'; // css 파일 연결
+import '../css/Main.css'; // 수정된 CSS 파일 연결
 
 function Main() {
     const navigate = useNavigate();
@@ -8,6 +8,7 @@ function Main() {
     const goToDiary = () => {
         navigate('/diary');
     };
+
     const handleLogout = () => {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('refreshToken');
@@ -18,7 +19,7 @@ function Main() {
     return (
         <div className="home-container">
             <header className="home-header">
-                <div className="logo">Nalchi</div>
+                <div className="logo">Lution</div>
             </header>
 
             <main className="main-content">
@@ -27,10 +28,10 @@ function Main() {
                     <p>카메라 화면</p>
                 </div>
 
-                <button className="diary-btn" onClick={goToDiary}>
+                <button className="rounded-button" onClick={goToDiary}>
                     일기장으로 가기
                 </button>
-                <button onClick={handleLogout}>
+                <button className="rounded-button logout" onClick={handleLogout}>
                     로그아웃
                 </button>
             </main>
