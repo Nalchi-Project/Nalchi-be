@@ -1,24 +1,30 @@
+/* Main.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #fff1f1, #fefbe9);
+}
+
 .home-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
 }
 
 .home-header {
     width: 100%;
-    padding: 20px;
+    padding: 20px 40px;
     background-color: #343a40;
     color: white;
     font-size: 24px;
     font-weight: bold;
     text-align: left;
-    padding-left: 40px;
 }
 
 .logo {
     cursor: pointer;
+    color: #fff6f6;
 }
 
 .main-content {
@@ -27,34 +33,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
 }
 
 .box {
     width: 500px;
-    height: 250px;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
     text-align: center;
-    padding: 20px;
 }
 
-.diary-btn {
+.box h2 {
+    font-size: 1.8rem;
+    color: #ff6f91;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.rounded-button {
     padding: 12px 24px;
-    font-size: 18px;
-    background-color: #007bff;
+    font-size: 16px;
+    background-color: #ffa07a;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
-.diary-btn:hover {
-    background-color: #0056b3;
+.rounded-button:hover {
+    background-color: #ff8c66;
+}
+
+.logout {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-top: 5px;
 }

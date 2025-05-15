@@ -38,7 +38,7 @@ function Login() {
 
     return (
         <div style={styles.container}>
-            <h2>로그인</h2>
+            <h2 style={styles.title}>로그인</h2>
 
             <form onSubmit={handleLocalLogin} style={styles.form}>
                 <input
@@ -55,14 +55,14 @@ function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                     style={styles.input}
                 />
-                <button type="submit" style={styles.loginButton}>일반 로그인</button>
+                <button type="submit" style={styles.button}>일반 로그인</button>
             </form>
 
             <div style={styles.separator}>또는</div>
 
             <div style={styles.buttonGroup}>
-                <button onClick={handleGoogleLogin} style={styles.googleButton}>Google 로그인</button>
-                <button onClick={handleBack} style={styles.backButton}>← 뒤로가기</button>
+                <button onClick={handleGoogleLogin} style={styles.button}>Google 로그인</button>
+                <button onClick={handleBack} style={styles.button}>← 뒤로가기</button>
             </div>
         </div>
     );
@@ -70,31 +70,44 @@ function Login() {
 
 const styles = {
     container: {
-        marginTop: "80px",
-        textAlign: "center"
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        background: "linear-gradient(to bottom, #fff1f1, #fefbe9)",
+        padding: "20px"
+    },
+    title: {
+        fontSize: "2rem",
+        fontWeight: "bold",
+        color: "#ff6f91",
+        marginBottom: "30px"
     },
     form: {
         display: "flex",
         flexDirection: "column",
+        gap: "15px",
         alignItems: "center",
-        gap: "12px",
         marginBottom: "20px"
     },
     input: {
         padding: "10px",
         fontSize: "16px",
-        width: "250px",
+        width: "260px",
         border: "1px solid #ccc",
-        borderRadius: "4px"
+        borderRadius: "8px"
     },
-    loginButton: {
-        padding: "10px 20px",
+    button: {
+        padding: "10px 24px",
         fontSize: "16px",
-        backgroundColor: "#2d6cdf",
+        backgroundColor: "#ffa07a",
         color: "white",
         border: "none",
-        borderRadius: "4px",
-        cursor: "pointer"
+        borderRadius: "20px",
+        cursor: "pointer",
+        boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        transition: "all 0.3s ease"
     },
     separator: {
         margin: "20px 0",
@@ -104,25 +117,8 @@ const styles = {
     buttonGroup: {
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
+        gap: "15px",
         alignItems: "center"
-    },
-    googleButton: {
-        padding: "10px 20px",
-        fontSize: "16px",
-        backgroundColor: "#4285F4",
-        color: "white",
-        border: "none",
-        borderRadius: "4px",
-        cursor: "pointer"
-    },
-    backButton: {
-        backgroundColor: "transparent",
-        color: "#333",
-        border: "1px solid #ccc",
-        padding: "8px 16px",
-        borderRadius: "4px",
-        cursor: "pointer"
     }
 };
 

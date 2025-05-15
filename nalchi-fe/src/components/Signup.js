@@ -27,57 +27,60 @@ function Signup() {
 
     return (
         <div style={styles.container}>
-            <h2>회원가입</h2>
+            <h2 style={styles.title}>회원가입</h2>
             <form onSubmit={handleSubmit} style={styles.form}>
                 <input type="text" placeholder="아이디" value={username} onChange={(e) => setUsername(e.target.value)} style={styles.input} />
                 <input type="password" placeholder="비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} style={styles.input} />
                 <input type="text" placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} style={styles.input} />
                 <input type="email" placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} style={styles.input} />
                 <input type="text" placeholder="닉네임" value={nickname} onChange={(e) => setNickname(e.target.value)} style={styles.input} />
-                <button type="submit" style={styles.submitButton}>회원가입</button>
+                <button type="submit" style={styles.button}>회원가입</button>
             </form>
-            <button onClick={handleBack} style={styles.backButton}>← 뒤로가기</button>
+            <button onClick={handleBack} style={styles.button}>← 뒤로가기</button>
         </div>
     );
 }
 
 const styles = {
     container: {
-        marginTop: "80px",
-        textAlign: "center"
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        background: "linear-gradient(to bottom, #fff1f1, #fefbe9)",
+        padding: "20px"
+    },
+    title: {
+        fontSize: "2rem",
+        fontWeight: "bold",
+        color: "#ff6f91",
+        marginBottom: "30px"
     },
     form: {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "12px",
+        gap: "15px",
         marginBottom: "20px"
     },
     input: {
         padding: "10px",
         fontSize: "16px",
-        width: "250px",
+        width: "260px",
         border: "1px solid #ccc",
-        borderRadius: "4px"
+        borderRadius: "8px"
     },
-    submitButton: {
-        padding: "10px 20px",
+    button: {
+        padding: "10px 24px",
         fontSize: "16px",
-        backgroundColor: "#2d6cdf",
+        backgroundColor: "#ffa07a",
         color: "white",
         border: "none",
-        borderRadius: "4px",
+        borderRadius: "20px",
         cursor: "pointer",
-        marginTop: "10px"
-    },
-    backButton: {
-        marginTop: "10px",
-        backgroundColor: "transparent",
-        color: "#333",
-        border: "1px solid #ccc",
-        padding: "8px 16px",
-        borderRadius: "4px",
-        cursor: "pointer"
+        boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        transition: "all 0.3s ease"
     }
 };
 
